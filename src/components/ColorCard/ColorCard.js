@@ -14,7 +14,7 @@ export default function ColorCard({ id, colorCode, changeColor, deleteColor }) {
   }
 
   useEffect(() => {
-    fetchColors(colorName);
+    fetchColors(colorCode);
   }, []);
 
   function handleDelete(e) {
@@ -44,7 +44,9 @@ export default function ColorCard({ id, colorCode, changeColor, deleteColor }) {
         <span className="color-title" onClick={showChangeInput}>
           {colorCode}
         </span>
-        <button onClick={handleDelete}>Delete color</button>
+        <button className="delete-button" onClick={handleDelete}>
+          &#10005;
+        </button>
       </div>
     </li>
   );
