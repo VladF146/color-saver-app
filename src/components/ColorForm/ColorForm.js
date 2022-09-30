@@ -1,3 +1,5 @@
+import "./ColorForm.css";
+
 export default function ColorForm({ addColor }) {
   function handleSubmit(e) {
     e.preventDefault();
@@ -9,10 +11,16 @@ export default function ColorForm({ addColor }) {
     e.target.reset();
   }
   return (
-    <form onSubmit={handleSubmit}>
+    <form className="ColorForm" onSubmit={handleSubmit}>
       <input type="color" name="colorCode" />
-      <input type="text" name="colorText" />
-      <button type="submit">Add new color</button>
+      <input
+        type="text"
+        name="colorText"
+        placeholder="Type a valid hex code..."
+      />
+      <button className="submit-button" type="submit">
+        Add new color
+      </button>
     </form>
   );
 }

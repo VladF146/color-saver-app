@@ -1,0 +1,14 @@
+.ColorForm {
+  max-width: 500px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 25px;
+  margin-bottom: 35px;
+}
+
+.submit-button {
+  width: auto;
+  padding: 15px 25px;
+}
